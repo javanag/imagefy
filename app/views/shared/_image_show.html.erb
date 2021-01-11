@@ -1,0 +1,11 @@
+<div class="image-container">
+    <%= link_to image_path(image) do %>
+        <%= image_tag url_for(image.image_file) %>
+    <% end %>
+
+    <h2><%= unless image.title.blank? then image.title else '(Untitled)' end %></h2>
+    <p><%= unless image.description.blank? then image.description else '(No description provided)' end %></p>
+    <p><b>tags:</b> <%= image.tags %></p>
+    <p><b>views:</b> <%= image.views %></p>
+    <p><b>upload date:</b> <%= image.created_at %></p>
+</div>

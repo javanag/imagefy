@@ -1,5 +1,9 @@
 class ImagesController < ApplicationController
   def index
+    @images = Image.open.order(created_at: :desc)
+    @images.each do |image|
+      Image.increment_counter(:views, image.id)
+    end
   end
 
   def create
