@@ -20,9 +20,12 @@ class ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
+    
     if @image.secret? && current_user != @image.user
       raise ActionController::RoutingError.new('Not Found')
     end
+
+    Image.increment_counter(:views, @image.id)
   end
 
   def edit
