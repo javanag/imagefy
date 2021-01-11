@@ -10,16 +10,19 @@ class ImagesController < ApplicationController
       user: current_user,
       title: permitted_params[:title],
       description: permitted_params[:description],
-      access_level: Image.access_levels[permitted_params[:access_level]],
+      access_level: permitted_params[:access_level],
       tags: tags
     )
 
     new_image.image_file.attach(permitted_params[:image_file])
-    redirect_to :root
+    redirect_to image_path(new_image)
   end
 
   def show
     @image = Image.find(params[:id])
+    if @image.secret? && current_user != @image.user
+      raise ActionController::RoutingError.new('Not Found')
+    end
   end
 
   def edit
@@ -47,7 +50,7 @@ class ImagesController < ApplicationController
           tags_list.push(tag.strip)
         end
 
-        tags_list.sort.join(',')
+        tags_list.uniq.sort.join(',')
     end
   end
 end
