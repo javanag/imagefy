@@ -10,3 +10,13 @@
 .imageform textarea {
   resize: none;
 }
+
+.image-container {
+  width: 60%;
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: contain;
+}
