@@ -1,0 +1,10 @@
+<div class="center footer">
+    <p>
+        <%= User.count %>
+        users have uploaded
+        <%= Image.count %>
+        images with
+        <%= Image.sum(:views) %>
+        total views
+    </p>
+</div>

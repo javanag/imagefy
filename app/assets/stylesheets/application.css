@@ -41,3 +41,10 @@
 .navbar ul li a{
   text-decoration: none;
 }
+
+.footer {
+  color: grey;
+  font-size: small;
+  padding-top: 2em;
+  padding-bottom: 0.25em;
+}
