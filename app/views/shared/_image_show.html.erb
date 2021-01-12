@@ -8,4 +8,5 @@
     <p><b>tags:</b> <%= image.tags %></p>
     <p><b>views:</b> <%= image.views %></p>
     <p><b>upload date:</b> <%= image.created_at %></p>
+    <p><b>uploader:</b> <%= link_to image.user.username, user_path(image.user.username) %></p>
 </div>

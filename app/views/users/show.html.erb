@@ -1,0 +1,12 @@
+<div class="image-container">
+  <h1><%= @user.username %></h1>
+  <p>enjoying imagefy! since <%= @user.created_at %></p>
+  <h2><%= @user.username %>'s images:</h2>
+  <% if @images.empty? %>
+    <i>(user has not uploaded any images...yet)</i>
+  <% end %>
+</div>
+
+<% @images.each do |image| %>
+  <%= render partial: 'shared/image_show', :locals => {:image => image} %>
+<% end %>
