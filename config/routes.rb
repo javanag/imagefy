@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :images
   resources :users, param: :username, only: [:show]
+  resources :surprise, only: [:index]
 end
