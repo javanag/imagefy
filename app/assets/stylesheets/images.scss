@@ -5,6 +5,7 @@
 .imageform input, .imageform label, .imageform textarea, .imageform select {
   display: block;
   margin: 0.75em;
+  max-width: 85%;
 }
 
 .imageform textarea {

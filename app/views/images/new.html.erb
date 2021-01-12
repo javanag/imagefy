@@ -1,21 +1,22 @@
-<h2>upload a new image</h2>
+<div class="image-container">
+    <h2>upload a new image</h2>
+    <%= form_for :image, url: images_path, multipart: true, html: { class: "imageform" } do |form| %>
+        <%= form.label :title_label, "title (50 chars)" %>
+        <%= form.text_field :title, size: 50, maxlength: 50  %>
 
-<%= form_for :image, url: images_path, multipart: true, html: { class: "imageform" } do |form| %>
-    <%= form.label :title_label, "title (50 chars)" %>
-    <%= form.text_field :title, size: 50, maxlength: 50  %>
+        <%= form.label :description_label, "description (1000 chars)" %>
+        <%= form.text_area :description, size: "45x6", maxlength: 1000 %>
 
-    <%= form.label :description_label, "description (1000 chars)" %>
-    <%= form.text_area :description, size: "45x6", maxlength: 1000 %>
+        <%= form.label :image_file_label, "image file" %>
+        <%= form.file_field :image_file %>
 
-    <%= form.label :image_file_label, "image file" %>
-    <%= form.file_field :image_file %>
+        <%= form.label :access_level_label, "access_level" %>
 
-    <%= form.label :access_level_label, "access_level" %>
+        <%= form.select :access_level, Image.access_levels.keys %>
 
-    <%= form.select :access_level, Image.access_levels.keys %>
+        <%= form.label :query, "tags (200 chars, comma separated)" %>
+        <%= form.text_area :tags, size: "45x3" %>
 
-    <%= form.label :query, "tags (200 chars, comma separated)" %>
-    <%= form.text_area :tags, size: "45x3" %>
-
-    <%= form.submit "upload" %>
-<% end %>
+        <%= form.submit "upload" %>
+    <% end %>
+</div>
