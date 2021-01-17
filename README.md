@@ -4,7 +4,7 @@ A minimal "image repository". Users can register and upload images with titles, 
 
 Unregistered and registered users alike users can view the image stream and view direct links to images, as well as take advantage of the surprise feature, taking them to a random open access image!
 
-This project has been deployed on Heroku, and is accessible here: [https://imagefy-image-repository.herokuapp.com/](https://imagefy-image-repository.herokuapp.com/).
+This project has been deployed on Heroku, and is accessible here: [https://imagefy-image-repository.herokuapp.com/](https://imagefy-image-repository.herokuapp.com/). Please allow some time for the instance to start if it has been sleeping.
 
 ## Local development
 
