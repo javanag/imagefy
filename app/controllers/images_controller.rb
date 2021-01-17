@@ -68,7 +68,7 @@ class ImagesController < ApplicationController
 
     unless tags.blank?
         tags.split(',').each do |tag|
-          tags_list.push(tag.strip)
+          tags_list.push(tag.strip.downcase)
         end
 
         tags_list.uniq.sort.join(',')
