@@ -5,7 +5,7 @@
 
     <h2><%= unless image.title.blank? then image.title else '(Untitled)' end %></h2>
     <p><%= unless image.description.blank? then image.description else '(No description provided)' end %></p>
-    <p><b>tags:</b> <%= image.tags %></p>
+    <p><b>tags:</b> <%= unless image.tags.blank? then image.tags else '(No tags provided)' end %></p>
     <p><b>views:</b> <%= image.views %></p>
     <p><b>upload date:</b> <%= image.created_at %></p>
     <p><b>uploader:</b> <%= link_to image.user.username, user_path(image.user.username) %></p>
