@@ -29,3 +29,4 @@ If deploying, make sure to fill out the `DATABASE_URL` variable as well.
 
 - Searching by tags
 - Alternate stream views e.g. grid
+- Comments on posts
