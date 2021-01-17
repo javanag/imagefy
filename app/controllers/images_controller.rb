@@ -39,6 +39,20 @@ class ImagesController < ApplicationController
   end
 
   def destroy
+    image = Image.find(params[:id])
+
+    if current_user != image.user
+      flash[:alert] = "Can't delete image, unauthorized user"
+    else
+      image.destroy
+      flash[:notice] = "Image deleted successfully"
+    end
+
+    if URI(request.referer).path == image_path(image)
+      redirect_to root_path
+    else
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   private

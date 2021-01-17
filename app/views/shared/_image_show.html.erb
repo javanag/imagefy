@@ -9,4 +9,8 @@
     <p><b>views:</b> <%= image.views %></p>
     <p><b>upload date:</b> <%= image.created_at %></p>
     <p><b>uploader:</b> <%= link_to image.user.username, user_path(image.user.username) %></p>
+
+    <% if image.user == current_user %>
+        <b><%= link_to "delete", image_path(image), method: :delete %></b>
+    <% end %>
 </div>
