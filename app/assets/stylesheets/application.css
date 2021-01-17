@@ -19,6 +19,12 @@
   margin: 0.25em;
 }
 
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: smaller;
+  }
+}
+
 .center {
   text-align: center;
 }
