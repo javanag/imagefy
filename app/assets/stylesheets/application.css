@@ -33,13 +33,18 @@
   padding: 0;
 }
 
-.navbar ul li{
+.navbar ul li {
   display: inline-block;
   padding: 0 10px;
 }
 
-.navbar ul li a{
+.navbar ul li a {
   text-decoration: none;
+  color: black;
+}
+
+.navbar ul li a:hover {
+  color: cadetblue;
 }
 
 .footer {
@@ -51,4 +56,9 @@
 
 .error {
   color: crimson;
+}
+
+.title a {
+  text-decoration: none;
+  color: black;
 }
