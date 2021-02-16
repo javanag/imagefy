@@ -12,6 +12,8 @@ Ruby 3 and Rails 6. Install Docker (Compose), which makes it trivial to set up a
 
 When starting for the first time, in order to create the database, make sure to run `docker-compose run web rails db:migrate`.
 
+In order to run the test suite, execute `docker-compose run web rails test`
+
 ## Environment variables
 
 Although the default engine for ActiveStorage locally is just the local filesystem, if you wish to use AWS S3, then make sure the relevant variables are defined in a `.env` file in the root repository directory:
