@@ -14,7 +14,7 @@ class ImagesController < ApplicationController
       title: permitted_params[:title],
       description: permitted_params[:description],
       access_level: permitted_params[:access_level],
-      tags: permitted_params[:tags]
+      tags: permitted_params[:tags],
       image_file: permitted_params[:image_file]
     )
 
