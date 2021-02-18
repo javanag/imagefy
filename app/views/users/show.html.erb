@@ -7,6 +7,4 @@
   <% end %>
 </div>
 
-<% @images.each do |image| %>
-  <%= render partial: 'shared/image_show', :locals => {:image => image} %>
-<% end %>
+<%= render partial: 'shared/images_paginated', :locals => {:images => @images} %>

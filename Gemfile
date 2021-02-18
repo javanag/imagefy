@@ -58,3 +58,4 @@ gem 'devise'
 gem 'aws-sdk-s3', require: false
 
 gem 'rexml'
+gem 'kaminari'
