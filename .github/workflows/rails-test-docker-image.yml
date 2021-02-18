@@ -15,5 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker-compose build
+    - name: Set up the test database
+      run: docker-compose run test rails db:setup
     - name: Run the Rails tests
       run: docker-compose run test
