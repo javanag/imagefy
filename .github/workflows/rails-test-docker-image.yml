@@ -9,9 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      COMPOSE_FILE: rails-test-docker-compose.yml
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker-compose build
     - name: Run the Rails tests
-      run: docker-compose run web rails test
+      run: docker-compose run test
