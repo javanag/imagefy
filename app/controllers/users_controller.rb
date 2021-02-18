@@ -12,7 +12,12 @@ class UsersController < ApplicationController
       @images = Image.all
     end
 
-    @images = @images.where(user: @user).order(created_at: :desc)
+    @images = 
+      @images
+        .where(user: @user)
+        .order(created_at: :desc)
+        .page(params[:page])
+
     @images.each do |image|
       Image.increment_counter(:views, image.id)
     end

@@ -1,0 +1,7 @@
+<% images.each do |image| %>
+  <%= render partial: 'shared/image_show', :locals => {:image => image} %>
+<% end %>
+
+<div class="image-container center">
+  <%= paginate images %>
+</div>

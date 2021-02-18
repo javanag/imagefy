@@ -8,7 +8,7 @@
         <%= form.text_area :description, size: "45x6", maxlength: 1000 %>
 
         <%= form.label :image_file_label, "image file" %>
-        <%= form.file_field :image_file, required: true %>
+        <%= form.file_field :image_file, required: true, accept: 'image/png,image/gif,image/jpeg', multiple: false %>
 
         <%= form.label :access_level_label, "access_level" %>
         <%= form.select :access_level, Image.access_levels.keys %>
