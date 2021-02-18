@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+  test:
+    environment: 
+      RAILS_ENV: test
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails test"
+    depends_on:
+      - db
