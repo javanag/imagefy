@@ -1,10 +1,10 @@
 # imagefy!
 
+<img alt="Screenshot of the interface" src="https://github.com/javanag/imagefy/assets/12960997/f73b27b0-9be6-4b66-b123-e9c1035f5a35" height="500">
+
 A minimal "image repository". Users can register and upload images with titles, tags, and descriptions, as well as setting access controls on a per-image basis. Open images are indexed on the homepage stream of images for all users, unlisted images are viewable to all with a direct link, secret images are only visible to the uploader.
 
 Unregistered and registered users alike users can view the image stream and view direct links to images, as well as take advantage of the surprise feature, taking them to a random open access image!
-
-This project has been deployed on Heroku, and is accessible here: [https://imagefy-image-repository.herokuapp.com/](https://imagefy-image-repository.herokuapp.com/). Please allow some time for the instance to start if it has been sleeping.
 
 ## Local development
 
